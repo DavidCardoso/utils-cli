@@ -4,25 +4,19 @@ Playing with scripts.
 
 ## Usage examples
 
-### Checking if a tag exists in an AWS S3 Bucket
-
-1. Get the list of buckets:
+### Getting the list of buckets:
 ```shell
 # It will create a '/tmp/utils-cli-bin-aws-s3-list-bucket-names.log' by default
 ./bin/aws-s3-list-bucket-names.sh
 
 # Changing the output file
 BUCKETS_LIST_FILE=output.txt ./bin/aws-s3-list-bucket-names.sh
+
+# Filtering the output
+BUCKET_NAME_FILTER='^some-prefix' ./bin/aws-s3-list-bucket-names.sh
 ```
 
-2. Edit the output file in order to have only one bucket name per line:
-```text
-bucket-1
-another-bucket
-my-bucket-02
-```
-
-3. Check the desired tag against the bucket list:
+### Checking if a tag exists in an AWS S3 Bucket:
 
 ```shell
 # Defaults to TAG_NAME=backup_tier TAG_VALUE=class_a BUCKETS_LIST_FILE=/tmp/utils-cli-bin-aws-s3-list-bucket-names.log
