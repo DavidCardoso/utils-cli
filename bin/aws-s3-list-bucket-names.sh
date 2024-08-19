@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# For log purpose (e.g., when runned remotely via GitHub raw content URL)
+# For log purpose (e.g., when run remotely via GitHub raw content URL)
 SERVICE=utils-cli-bin-aws-s3-list-bucket-names
 
 # Args
