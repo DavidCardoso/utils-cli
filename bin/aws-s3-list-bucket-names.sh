@@ -28,6 +28,6 @@ fi
 
 # Success
 # gets just the bucket names
-OUTPUT=$(echo "${response}" | jq -r '.[]' | grep "${BUCKET_NAME_FILTER}")
+OUTPUT=$(echo "${response}" | jq -r '.[]' | grep -E "${BUCKET_NAME_FILTER}")
 # prints the result and save it in a file
 echo "${OUTPUT}" | tee ${OUTPUT_FILE}
