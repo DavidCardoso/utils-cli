@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# Check if the bucket name arguments are provided
-if [ -z "$1" ]; then
-    echo "Usage: $0 <bucket-name>"
+# Check environment variables
+if [ -z "$BUCKET_NAME" ]; then
+    echo "Error: BUCKET_NAME is not provided"
     exit 1
 fi
-
-BUCKET_NAME=$1
-OBJECT_KEY=$2
 
 # Get Details for the bucket
 echo "// Head Bucket "
