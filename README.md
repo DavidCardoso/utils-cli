@@ -62,3 +62,5 @@ BUCKET_NAME='bucket-name' OBJECT_KEY='my/folder/' ./bin/aws-s3-get-object-detail
 # Files
 BUCKET_NAME='bucket-name' OBJECT_KEY='my/folder/file.txt' ./bin/aws-s3-get-object-details.sh
 ```
+
+<!-- TODO: add examples of how to run the script directly via GitHub raw content URL -->
