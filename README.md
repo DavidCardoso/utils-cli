@@ -9,6 +9,9 @@ Playing with scripts.
     - [Getting AWS S3 bucket details](#getting-aws-s3-bucket-details)
     - [Getting AWS S3 bucket lock config](#getting-aws-s3-bucket-lock-config)
     - [Getting AWS S3 object details](#getting-aws-s3-object-details)
+    - [Getting the list of AWS Backup jobs](#getting-the-list-of-aws-backup-jobs)
+
+<!-- TODO: add examples of how to run the script directly via GitHub raw content URL -->
 
 ## Usage examples
 
@@ -63,4 +66,17 @@ BUCKET_NAME='bucket-name' OBJECT_KEY='my/folder/' ./bin/aws-s3-get-object-detail
 BUCKET_NAME='bucket-name' OBJECT_KEY='my/folder/file.txt' ./bin/aws-s3-get-object-details.sh
 ```
 
-<!-- TODO: add examples of how to run the script directly via GitHub raw content URL -->
+### Getting the list of AWS Backup jobs
+
+```shell
+# optional; defaults to '/tmp/utils-cli-bin-aws-s3-list-bucket-names.log'
+export OUTPUT_FILE=output.txt
+# optional; defaults to 'today - 1'
+export BACKUP_JOBS_CREATION_DATE='2025-02-01'
+# optional; defaults FAILED
+export BACKUP_JOBS_FILTER='FAILED'
+# optional; defaults 'BackupJobId, State, BackupVaultName, ResourceType, ResourceName'
+export BACKUP_JOBS_FIELDS='BackupJobId, State, ResourceName'
+
+./bin/aws-backup-list-jobs.sh
+```
