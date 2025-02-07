@@ -75,7 +75,7 @@ export OUTPUT_FILE=output.txt
 export BACKUP_JOBS_CREATION_DATE='2025-02-01'
 # optional; defaults FAILED
 export BACKUP_JOBS_FILTER='FAILED'
-# optional; defaults 'BackupJobId, State, BackupVaultName, ResourceType, ResourceName'
+# optional; defaults 'BackupJobId, CreationDate, State, BackupVaultName, ResourceType, ResourceName'
 export BACKUP_JOBS_FIELDS='BackupJobId, State, ResourceName'
 
 ./bin/aws-backup-list-jobs.sh

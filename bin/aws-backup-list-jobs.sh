@@ -11,7 +11,7 @@ BACKUP_JOBS_CREATION_DATE="${BACKUP_JOBS_CREATION_DATE:-${DEFAULT_CREATION_DATE}
 BACKUP_JOBS_FILTER=${BACKUP_JOBS_FILTER:-FAILED}
 
 # Set the fields to be displayed
-BACKUP_JOBS_FIELDS=${BACKUP_JOBS_FIELDS:-'BackupJobId, State, BackupVaultName, ResourceType, ResourceName'}
+BACKUP_JOBS_FIELDS=${BACKUP_JOBS_FIELDS:-'BackupJobId, CreationDate, State, BackupVaultName, ResourceType, ResourceName'}
 
 # Output
 OUTPUT_FILE=${OUTPUT_FILE:-/tmp/utils-cli-bin-aws-s3-list-bucket-names.log}
